@@ -1,4 +1,4 @@
-# Local development/demo only. AWS production services are documented in docs/aws.md.
+# Local development only. AWS resources are not provisioned by this file.
 services:
   db:
     image: postgres:17-alpine
@@ -19,12 +19,9 @@ services:
     build:
       context: .
       dockerfile: apps/api/Dockerfile
-    env_file: apps/api/.env
     environment:
       APP_ENV: local
-      AUTH_MODE: demo
       DATABASE_URL: postgresql+psycopg://debug_ed:local-development-only@db:5432/debug_ed
-    command: ["sh", "-c", "alembic upgrade head && python -m app.seed && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
     ports:
       - "127.0.0.1:8000:8000"
     depends_on:
@@ -36,7 +33,6 @@ services:
       dockerfile: apps/web/Dockerfile
       args:
         NEXT_PUBLIC_API_URL: http://127.0.0.1:8000
-        NEXT_PUBLIC_AUTH_MODE: demo
     ports:
       - "127.0.0.1:3000:3000"
     depends_on:

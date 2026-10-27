@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Debug Ed · Teacher workspace",
-  description:
-    "A shared foundation for curriculum, thoughtful lesson planning, and a teaching companion.",
+  title: "Debug Ed · Boilerplate",
+  description: "Project structure for the Debug Ed LMS.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

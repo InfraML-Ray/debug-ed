@@ -1,6 +1,8 @@
 from alembic import context
-from app import models  # noqa: F401
-from app.core.database import Base, get_engine
+from app.db.base import Base
+from app.db.session import get_engine
+
+# Import future module models here so Alembic can discover their metadata.
 
 
 def run_migrations_online():

@@ -1,13 +1,9 @@
 from functools import lru_cache
 
 from sqlalchemy import create_engine, event
-from sqlalchemy.orm import DeclarativeBase, Session
+from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
-
-
-class Base(DeclarativeBase):
-    pass
 
 
 @lru_cache

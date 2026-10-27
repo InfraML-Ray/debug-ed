@@ -10,7 +10,7 @@ const result = spawnSync(
   {
     cwd: apiDir,
     encoding: "utf8",
-    env: { ...process.env, APP_ENV: "test", AUTH_MODE: "demo", AI_PROVIDER: "demo" },
+    env: { ...process.env, APP_ENV: "test" },
   },
 );
 if (result.status !== 0) {

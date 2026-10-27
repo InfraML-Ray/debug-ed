@@ -30,8 +30,6 @@ def main():
     python = API / ".venv/bin/python"
     run([python, "-m", "pip", "install", "-c", "requirements.lock", "-e", ".[dev]"], API)
     run(["npm", "ci"])
-    run([python, "-m", "alembic", "upgrade", "head"], API)
-    run([python, "-m", "app.seed"], API)
     print("Ready. Run 'make api' and 'make web' in separate terminals.")
 
 

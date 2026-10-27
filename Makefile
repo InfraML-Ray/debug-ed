@@ -1,7 +1,7 @@
 PYTHON ?= python3.12
 API = apps/api
 
-.PHONY: setup api web check test migrate seed db-up db-down types
+.PHONY: setup api web check test migrate db-up db-down types
 
 setup:
 	$(PYTHON) scripts/setup.py
@@ -24,9 +24,6 @@ test:
 
 migrate:
 	cd $(API) && .venv/bin/alembic upgrade head
-
-seed:
-	cd $(API) && .venv/bin/python -m app.seed
 
 db-up:
 	docker compose up -d db
