@@ -1,4 +1,4 @@
-# Debug Ed boilerplate
+# Debug Ed
 
 Repository structure and development tooling for a future LMS. This is a scaffold: no LMS workflows, authentication integration, AI integration, business database tables, or demo data are implemented.
 
@@ -85,4 +85,4 @@ For PostgreSQL, start Docker Desktop, run `make db-up`, and use the example Post
 
 Put UI components/hooks in `apps/web/src/features/<feature>`, with route pages in `src/app`. Put Python feature logic in `apps/api/app/modules/<feature>`. Add `router.py`, `schemas.py`, `service.py`, and `models.py` as needed; do not add empty layers in advance. Register routers in `app/api/v1/router.py` and import future model metadata in `alembic/env.py` before generating migrations.
 
-Read [architecture conventions](docs/architecture.md) and [confirmed/open decisions](docs/decisions.md). The repo is local; no GitHub remote or AWS infrastructure is configured. A license is still to be chosen by the team.
+Read [architecture conventions](docs/architecture.md) and [confirmed/open decisions](docs/decisions.md). AWS infrastructure is not configured. A license is still to be chosen by the team.

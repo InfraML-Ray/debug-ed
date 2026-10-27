@@ -10,6 +10,7 @@
 - Fresh accounts and application data; no migration from the old app is required.
 - AWS hosting target.
 - Your primary feature area will be the AI companion.
+- Repository name: `debug-ed`, under the `InfraML-Ray` personal GitHub account, private for team review.
 
 ## Boilerplate defaults
 
@@ -24,6 +25,6 @@
 - AI provider/model and what the meeting's “open route” reference meant.
 - AI retrieval, document ingestion, and exact feature behaviour.
 - Specific AWS services, region, and resource reuse.
-- Product name, GitHub organisation/visibility, and license. “Debug Ed” is the working name.
+- Long-term GitHub organisation ownership and license. “Debug Ed” is the working product name.
 
 The old repo is background context. Its Better Auth, Bedrock, and EC2 choices are not commitments for this rebuild. The earlier functional demo is recoverable in Git history; current source is restricted to the boilerplate scope.
