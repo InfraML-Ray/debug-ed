@@ -1,0 +1,23 @@
+{
+  "name": "debug-ed",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @debug-ed/web",
+    "build": "npm run build --workspace @debug-ed/web",
+    "lint": "npm run lint --workspace @debug-ed/web",
+    "typecheck": "npm run typecheck --workspace @debug-ed/web",
+    "api:types": "node scripts/generate-api-types.mjs",
+    "format": "prettier --write apps/web/src apps/web/*.ts apps/web/*.mjs scripts/*.mjs *.json",
+    "format:check": "prettier --check apps/web/src apps/web/*.ts apps/web/*.mjs scripts/*.mjs *.json"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}
