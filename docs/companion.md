@@ -12,7 +12,9 @@ The companion's scope is deliberately small while product requirements are open.
 | `apps/api/app/schemas.py` | Public chat request/response contract |
 | `apps/api/tests/test_companion.py` | History, ownership, failure, and context behaviour |
 
-OpenRouter is implemented as an optional adapter because it is the likely meaning of the meeting's “open route” reference. Confirm that interpretation with the team before selecting a production provider or model.
+The production AI provider is **undecided**. OpenRouter is available as an optional adapter, but the meeting's “open route” reference has not been clarified. The previous app documented Amazon Bedrock; that does not commit the rebuild to Bedrock or OpenRouter. Local demo replies remain the default and make no external model calls.
+
+Once the team chooses a provider, configure the existing OpenRouter adapter or add another implementation of `ChatProvider` and extend the provider settings/factory. A Bedrock adapter is not implemented yet. Keep provider-specific authentication and request formatting in the adapter, with prompts, school-scoped context, and conversation ownership in the application layer.
 
 ## Current request
 
